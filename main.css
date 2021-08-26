@@ -1,0 +1,268 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    bottom: 0px;
+    outline: 0px;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(3,100vh);
+    grid-template-areas: "main"
+                         "content"
+                         "footer";
+    overflow-x: hidden;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.main{
+    grid-area: main;
+    background-color: blue;
+    flex-flow: column;
+    background-image:linear-gradient( rgba(0,0,0,0.7), rgba(255,255,255,0.2)), url(./Hacker-Wallpaper-7.jpg);
+    background-size: cover;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-areas: ". . ."
+                         ". sub_content ."
+                         ". . .";
+}
+
+.sub_content{
+    grid-area: sub_content;
+    flex-flow: column;
+}
+
+.main h1{
+    font-size: 2.9rem;
+}
+
+.main p{
+    font-size: 1.1rem;
+}
+
+button{
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    border: 2px solid white;
+}
+
+button:hover{
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.content{
+    grid-area: content;
+    display: grid;
+    grid-template-rows: 3fr 7fr;
+    grid-template-areas: "details"
+                         "column";
+}
+
+.details{
+    grid-area: details;
+    flex-flow: column;
+    padding-right: 7rem;
+    padding-left: 7rem;
+}
+
+.details p{
+    column-count: 2;
+    column-gap: 2rem;
+    font-size: 1.1rem;
+}
+.details h1{
+    font-size: 2.9rem;
+}
+
+.column{
+    grid-area: column;
+    background-color: rgb(51, 51, 51);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: ". . . . . "
+                         ". column_1 column_2 column_3 ."
+                         ". . . . .";
+}
+
+.column_1{
+    grid-area: column_1;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-rows: 4fr 6fr;
+    grid-template-areas: "img_1"
+                         "det";
+}
+
+.img_1{
+    grid-area: img_1;
+    /* height: 10rem;
+    width: 17rem; */
+    /* background-color: chartreuse; */
+    background-image: url(./pexels-photo-574077.jpeg);
+    background-size: cover;
+}
+
+.det{
+    grid-area: det;
+    background-color: chocolate;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+.det h1{
+    font-size: 1.7rem;
+}
+
+.column_2{
+    grid-area: column_2;
+    display: grid;
+    grid-template-rows: 4fr 6fr;
+    grid-template-areas: "img_2"
+                         "det_1";
+}
+
+.img_2{
+    grid-area: img_2;
+    background-image: url(./pexels-photo-261628.jpeg);
+    background-size: cover;
+}
+
+.det_1{
+    grid-area: det_1;
+    background-color: chocolate;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+.det_1 h1{
+    font-size: 1.7rem;
+}
+
+.column_3{
+    grid-area: column_3;
+    display: grid;
+    grid-template-rows: 4fr 6fr;
+    grid-template-areas: "img_3"
+                         "det_2";
+}
+
+.img_3{
+    grid-area: img_3;
+    background-image: url(./pexels-photo-265087.jpeg);
+    background-size: cover;
+}
+
+.det_2{
+    grid-area: det_2;
+    background-color: chocolate;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+.det_2 h1{
+    font-size: 1.7rem;
+}
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-areas: "cont"
+                         "contact"
+                         "foot";
+}
+
+.cont{
+    padding-top: 9rem;
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-areas: ". . ."
+                         ". sub_cont ."
+                         ". . .";
+}
+
+.sub_cont{
+    grid-area: sub_cont;
+    flex-flow: column;
+}
+
+.sub_cont p{
+    padding-top: 2rem;
+}
+
+.contact{
+    grid-area: contact;
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "contact_us about";
+}
+
+.contact_us{
+    grid-area: contact_us;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    flex-flow: column;
+    padding: 4rem;
+}
+
+.contact_us p{
+    padding-top: 2rem;
+}
+
+.about{
+    grid-area: about;
+    background-color: rgb(63, 60, 60);
+    color: white;
+    flex-flow: column;
+    padding: 4rem;
+}
+
+.about p{
+    padding-top: 2rem;
+}
+
+.foot{
+    grid-area: foot;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "solution media";
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.solution{
+    grid-area: solution;
+}
+
+.media{
+    grid-area: media;
+
+}
